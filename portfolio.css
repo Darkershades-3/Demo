@@ -1,0 +1,206 @@
+/* Basic Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #121212; /* Deep dark background */
+    color: #e0e0e0; /* Light text for contrast */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Navigation Layout --- */
+.navbar {
+    background-color: #1f1f1f;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #00bcd4; /* Vivid cyan accent color */
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff4081; /* Vivid pink on hover */
+}
+
+/* --- Hero Banner Layout --- */
+.hero-section {
+    background: linear-gradient(135deg, #311b92, #00bcd4); /* Vivid gradient */
+    border-radius: 12px;
+    margin: 2rem;
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.hero-title {
+    /* Responsive font size using clamp() */
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 1rem;
+    /* Ensures text wraps correctly on small screens */
+    word-break: break-word;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    font-weight: 400;
+}
+
+/* --- Content Section Layout --- */
+.content-section {
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #00bcd4;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #1f1f1f;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Tablet and Desktop Layout for About Section */
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.image-wrapper.small-placeholder {
+    max-width: 250px; /* Smaller image size */
+    flex-shrink: 0;
+    margin: 0 auto; /* Centers on mobile */
+}
+
+.placeholder-box {
+    width: 100%;
+    height: 250px; /* Square aspect ratio */
+    background-color: #2c2c2c;
+    border: 3px dashed #00bcd4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Makes it a circle */
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+.about-text {
+    flex-grow: 1;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .about-text {
+        text-align: left;
+    }
+}
+
+.about-text p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.btn-follow {
+    background-color: #ff4081; /* Vivid pink button */
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 700;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-follow:hover {
+    background-color: #c60055;
+    transform: translateY(-2px);
+}
+
+/* --- Footer "Shades" Layout --- */
+.footer-section {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 1.8rem;
+    color: #00bcd4;
+    margin-bottom: 0.5rem;
+}
+
+.footer-content p {
+    margin-bottom: 2rem;
+    color: #aaaaaa;
+}
+
+.shades-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.shade-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 2px solid #00bcd4;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.shade-link:hover {
+    background-color: #00bcd4;
+    color: #000000;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: #777;
+}
